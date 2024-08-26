@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <header style="background-color: black;">
+     
+        <div class="logo">
+        <img src="J.ie Studio.png" alt="J.ie Logo" width="70" height="70">
+        </div>
+    
+        
+
+
+
+
+</header>
+
+<main>
+    <nav class="navbar">
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+            <h1>☰Menu</h1>
+        </label>
+        <label id="overlay" for="sidebar-active"></label>
+    <div class="links-container">
+        <label for="sidebar-active" class="close-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+        
+        </label>
+ 
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Packages</a>
+        <a href="#">Gallery</a>
+        <a href="#">FAQs</a>
+        <a href="#">Contact Us</a>
+        </div>
+      </nav>
+    
+    
+    
+      <div class="slideshow">
+        <img src="image1.png" alt="Image 1">
+    </div>
+    <div class="slideshow">
+        <img src="image2.png" alt="Image 2">
+    </div>
+    
+    
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slideshow');
+    
+        function showSlide(index) {
+            slides.forEach(slide => slide.style.display = 'none');
+            slides[index].style.display = 'block';
+        }
+    
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+            
+        }
+    
+        // Show the first slide
+        showSlide(currentSlide);
+    
+        // Move to the next slide every 3 seconds
+        setInterval(nextSlide, 5000);
+
+        
+    </script>
+    
+<div class="we-capture-memories">
+
+    <img src="we capture memories.png" alt="We Capture Memories">
+
+</div>
+  
+
+    <div class="packages" style="background: rgb(212, 212, 212);">
+    <h2 class="text-center">Packages</h2>
+</div>
+  
+<div class="book">
+    <button><a href="#">BOOK</a></button>
+    </div>
+
+    
+</main>
+<footer>
+<div class="row">
+    <div class="col">
+            <img src="J.ie Studio.png" alt="footer-logo" style="width: 100px;">
+    </div>
+    <div class="col">
+        <h3>Location</h3>
+        <p>Gov. M. Cuenco Ave,</p>
+        <p>Talamban Times Square,</p>
+        <p>Talamban, Cebu City, 6000 Cebu</p>
+        <p class="email-id">jiestudio@gmail.com</p>
+        <h4>+63 9167955123</h4>
+    </div>
+    <div class="col">
+    <h3>Links</h3>
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Packages</a>
+        <a href="#">Gallery</a>
+        <a href="#">FAQs</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div class="col">
+        <div class="social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-tiktok"></i>
+        </div>
+    </div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
